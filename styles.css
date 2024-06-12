@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 20px;
+    /* Reduced gap to fit better on smaller screens */
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    /* Ensure container width adjusts to screen size */
+    max-width: 600px;
+    /* Max width for larger screens */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(#f00606, #ffcc33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1,
+footer p {
+    margin: 0;
+}
+
+#hangman img {
+    width: 200px;
+    height: auto;
+}
+
+#wordToGuess {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin: 20px 0;
+}
+
+#letters {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.letter {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #6009eb;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.letter:hover {
+    background-color: #5754f3;
+}
+
+.letter.guessed {
+    color: grey;
+    cursor: default;
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        gap: 10px;
+        /* Further reduce gap for smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+        /* Adjust top margin */
+    }
+
+    #wordToGuess {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        margin: 10px 0;
+        /* Adjust margins */
+    }
+
+    #letters {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    .letter {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    button {
+        margin-bottom: 30px;
+        /* Adjust bottom margin */
+        margin-top: 0px;
+        /* Adjust top margin */
+    }
+
+    .container {
+        margin-top: 10px;
+        /* Adjust top margin */
+        padding: 10px;
+        /* Adjust padding */
+    }
+}
